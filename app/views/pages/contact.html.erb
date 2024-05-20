@@ -1,0 +1,16 @@
+
+<form action="/contact" method="get">
+  <input type="text" name="teacher" placeholder="Who are you looking for?" value="<%= params[:member] %>">
+  <input type="submit">
+</form>
+
+
+<p><%= @my_params %></p>
+<ul>
+  <% @teachers.each do |teacher| %>
+    <li><%= teacher %></li>
+  <% end %>
+</ul>
+
+
+<%= link_to "Retour à la home", root_path() %>
